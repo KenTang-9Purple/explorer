@@ -3,40 +3,24 @@ let ytdSunSetValueOf;  // 昨天日落時間 VALUE；
 let tdySunRiseValueOf; // 今天日出時間 VALUE；
 let tdySunSetValueOf;  // 今天日落時間 VALUE；
 let tmrSunRiseValueOf; // 明天日出時間 VALUE；
-let lat = 22.3994305;
-let lon = 113.9709846;
 let fPosition;
 let bDaytime;
 let isShowCycle=false;
 
-document.getElementById("footer_date").innerHTML = new Date().getFullYear();
-
-
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition( (position)=> {
-        lat = position.coords.latitude;
-        lon = position.coords.longitude;
-        updateSSR();
-      }    
-    )
-  }
-  updateSSR();
-  calSMPosition();
-  timeout(true);
-}
-
+//提取日出日落時間
 function updateSSR(){
   let timezone= -(new Date()).getTimezoneOffset()/60;
   let res0 = computeSunRiseSunSet( lat, lon,timezone,-1);
-  ytdSunSetValueOf = res0.SunSet.valueOf()-1000*60*60*24;
+  ytdSunSetValueOf = res0.SunSet.valueOf()-86400000;
   let res1 = computeSunRiseSunSet( lat, lon,timezone,0);
   tdySunRiseValueOf =res1.SunRise.valueOf();
   tdySunSetValueOf = res1.SunSet.valueOf();
   let res2 = computeSunRiseSunSet( lat, lon,timezone,1);
-  tmrSunRiseValueOf =res2.SunRise.valueOf()+1000*60*60*24;
+  tmrSunRiseValueOf =res2.SunRise.valueOf()+86400000;
 }
 
+
+//計算太陽月亮位置
 function calSMPosition(){
   let curTime=new Date();
   document.getElementById('Time').innerText=curTime.toTimeString().substring(0,5) ;
@@ -45,11 +29,13 @@ function calSMPosition(){
       fPosition=1 - (curTime.valueOf()-tdySunRiseValueOf)/(tdySunSetValueOf-tdySunRiseValueOf);
     } else if (curTime.valueOf() < ytdSunSetValueOf){
       fPosition=1 - (curTime.valueOf()-ytdSunSetValueOf)/(tdySunRiseValueOf-ytdSunSetValueOf);
-    } else {
+    } else if (curTime.valueOf() < tmrSunRiseValueOf)   {
       fPosition=1 - (curTime.valueOf()-tdySunSetValueOf)/(tmrSunRiseValueOf-tdySunSetValueOf);
+    } else {
+      updateSSR();
+      calSMPosition();
     }
     updateSMPosition(fPosition,bDaytime);
-    return {fPosition,bDaytime};
   }
 
 function updateSMPosition(Position,isDaytime){
@@ -77,4 +63,12 @@ function timeout() {
     }
   }, (isShowCycle ? 40: 1000));
 }
-window.onload = getLocation();
+//window.onload = getLocation([ updateSSR, calSMPosition, timeout]);
+
+
+window.addEventListener("load", (event) => {
+  getLocation(updateSSR);
+  updateSSR();
+  calSMPosition();
+  timeout();
+});

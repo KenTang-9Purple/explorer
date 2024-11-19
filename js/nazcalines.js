@@ -1,4 +1,3 @@
-document.getElementById("footer_date").innerHTML = new Date().getFullYear();
 document.getElementById("tarot_img").onclick = () => {
   const card_info=[{"ID":"00","name_ch":"愚者","name_en":"The Fool","keyword":"流浪、自由、無經驗的"},
 {"ID":"01","name_ch":"魔術師","name_en":"The Magician","keyword":"創造、說服、運用"},

@@ -1,6 +1,5 @@
-document.getElementById("footer_date").innerHTML = new Date().getFullYear();
 
-function calNumerology(){
+document.getElementById("calNumerology").onclick =() => {
   const result = [
     "您是一個想像力豐富與服務人群的愛好者",
     "您是一個能夠獨立和具有創意頭腦的人",
@@ -13,7 +12,7 @@ function calNumerology(){
     "您是一個：擁有權力和勇於開發的愛好者",
     "您是一個想像力豐富與服務人群的愛好者"
   ];
-   console.log(document.getElementById("birthday").value   );
+   console.log(document.getElementById("birthday").value);
    if (document.getElementById("birthday").value =="")
       return(alert('請輸入生日日期'));
     let numerology = document.getElementById("birthday").value.split("-").reduce((a, c) => a + Number(c),0) % 9;
