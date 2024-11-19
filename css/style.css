@@ -20,7 +20,7 @@ body {
 }
 
 .hero.starsky{
-    background-image:url('images/star_sky.png');
+    background-image:url('../images/star_sky.png');
 }
 
 .hero.main{
