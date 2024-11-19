@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>埃及底比斯</title>
+</head>
+<body>
+  <div class="container">
+    <div class="fixed-top">
+      <nav class="navbar navbar-expand-lg  navbar-light bg-warning">
+        <a class="navbar-brand" href="#"><i class="fa-solid fa-yin-yang fa-beat-fade"></i></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sanliao.html">中國三僚村</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tajmahal.html">印度泰姬瑪哈陵</a>
+            </li>
+            <li class="nav-item  active">
+              <a class="nav-link" href="thebes.html">埃及底比斯</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="nazcalines.html">秘魯納斯卡線</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="jumbotron mt-6 hero number">
+      <h2 class="display-4" id="Time">生命數字</h2>
+      <p class="lead" id="real_sun_time">
+        <form>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">出生日期</span>
+            </div>
+            <input type="date" id="birthday" />
+            <div class="input-group-append">
+              <button class="btn btn-secondary" type="button" onclick="calNumerology()">算命</button>
+            </div>
+          </div>
+        </form>
+
+
+      </p>
+      <hr class="my-4">
+      <p id="result" class="bg-dark"></p>
+    </div>
+    <h1>埃及底比斯</h1>
+    <P>地點：埃及尼羅河上的底比斯</P>
+    <p>特色：底比斯是古埃及的一個重要城市，被視為<strong>神秘學和神聖的中心</strong>。這裡有許多古老的神廟和神秘建築，以及與埃及神話和神秘學有關的傳說，讓你深入了解古埃及的玄學和神秘學知識。
+    </P>
+    <P>
+      底比斯是上埃及古城，古埃及名稱為瓦塞特，意為權杖之城。瀕臨尼羅河，位於今埃及中部，即今天的盧克索附近。作為皇室居地和宗教膜拜的宗教中心，它從公元前22世紀中期到公元前18世紀曾繁榮一時。它的建築遺跡包括許多輝煌的廟宇和帝王谷附近的法老陵墓。</p><p>
+在古王國時期，底比斯只是一個寂寂無名的小型商道中心。它作為通往西奈半島和彭特的水路及通往努比亞的陸路的樞紐。但正因為這個優勢，第十一王朝法老曼圖霍特普二世決定把首都定在底比斯，並在底比斯為阿蒙神大興土木，興建很多神廟，底比斯從此成為古埃及的聖地。
+
+      </P>
+  <h2>現存遺跡</h2>
+  <hr />
+
+  <div class="row">
+    <div class="col-md-8">
+      <h2>卡納克<span class="text-muted">（Karnak）</span>神廟</h2>
+      <p>卡納克（Karnak）神廟是底比斯最為古老的廟宇，在尼羅河東岸的盧克索鎮北4千米處，該神廟經很長時間陸續建造起來，由磚牆隔成三部分。其中中間的部分保存得最完好，也是面積最大的一部分，占地約有30公頃，也是獻給太陽神阿蒙的；左側的是獻給Montu神的，占地2.5公頃；另一個是獻給阿蒙神的妻子——形為禿鷲的姆特女神，現在尚未發掘。
+      </p>
+    </div>
+    <div class="col-md-4">
+      <img src="3/1.jpg" class="w-100"/>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-md-8 order-md-2">
+      <h2>盧克索神廟<span class="text-muted">（Luxor Temple）</span></h2>
+      <p>盧克索神廟（Luxor Temple）位於埃及盧克索的尼羅河東岸，即古埃及新王國時期的首都底比斯，大約建於公元前十四世紀。
+        盧克索神廟主要有兩個作用，首先在每年埃及的新年在這裡慶祝奧皮特節。阿蒙、姆特和孔斯的神像被放在擔架上從2.5千米遠的卡納克神廟抬到盧克索神廟。一開始這個節日要慶祝11天，後來被延長到27天。在途中的小神廟裡擔架會被放下，做一休息。姆特和孔斯的擔架要被抬到廊柱殿後面的小神殿，只有阿蒙的擔架要被抬到聖殿。</p><p>
+        第二個作用是法老與其神靈氣的結合。每年新年是法老要與他的神靈氣結合，這是他的神話儀式的一部分。這個儀式首次是在他登基時進行。
+        </p>
+    </div>
+    <div class="col-md-4 order-md-1">
+      <img src="3/2.jpg" class="w-100"/>
+    </div>
+  </div>
+  <hr />
+
+  <div class="row">
+    <div class="col-md-8">
+      <h2>孔斯神廟</h2>
+      <p>卡孔斯神庙位于埃及卢克索著名的卡纳克神庙群中，是古埃及文明辉煌与宗教奉献的杰出象征。该神庙供奉月神孔斯，这位神是底比斯三神之一，也是新王国时期建筑与文化成就的缩影。神庙的建造始于拉美西斯三世统治期间（公元前1186-1155年），他利用该地点一座更早的建筑的石料建造新庙 (Whizzed)。神庙的重要性不仅在于其建筑之美，还在于其作为宗教实践、神话以及艺术才能的历史见证。</p>
+    </div>
+    <div class="col-md-4">
+      <img src="3/3.jpg" class="w-100"/>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-md-8 order-md-2">
+      <h2>獅身人面像大道<span class="text-muted">（طريق الكباش）</span></h2>
+      <p>獅身人面大道（阿拉伯語：طريق الكباش）是一條長3公里（2700米）、寬約75米的大道，它連接著卡納克神廟和盧克索神廟，出土於底比斯古城，兩側有1057座獅身人面像和獅身公羊像。</p><p>
+        1949年，埃及考古學家Mohammed Zakaria Ghoneim在盧克索神廟附近發現了獅身人面大道的蹤跡，1958年至1961年又發現了17個雕像，1961年至1964年又有55個雕像出土。1984年到2000年期間，人們理清了獅身人面大道的全部路線。
+        
+        </p>
+    </div>
+    <div class="col-md-4 order-md-1">
+      <img src="3/4.jpg" class="w-100"/>
+
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-md-8">
+      <h2>德爾麥地那<span class="text-muted">（Deir el-Medina）</span></h2>
+      <p>德尔麦地那（Deir el-Medina），位于埃及卢克索尼罗河西岸，这个位址为我们提供了一个独特的窗口，让我们了解建造在帝王谷和王后谷的皇家陵墓中的工匠的日常生活。这个村庄建立于新王国第十八王朝（约公元前1550年至公元前1080年）期间，古称“真理之地”或Set Maat，居住着“真理之地的仆人”。德尔麦地那的考古重要性体现在保存完好的房屋、墓葬和寺庙，包括奈费尔塔利王后的墓以及哈索尔神殿。发现的文本和个人信件详细记录了社会关系和日常生活，使其成为最有文献记载的古代社区之一。</p>
+    </div>
+    <div class="col-md-4">
+      <img src="3/5.jpg" class="w-100"/>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-md-8 order-md-2">
+      <h2>拉美西姆<span class="text-muted">（Rhamesséion）</span>神廟</h2>
+      <p>拉美西姆神廟是埃及法老拉美西斯二世. 神廟坐落於上埃及的底比斯大墓地, 自當今埃及樂蜀市，橫跨尼羅河。「拉美西姆」–它的法語形式「Rhamesséion」一詞是由1829年拜訪過神廟，並首次破譯埃及象形文字的埃及學家讓-弗朗索瓦·商博良創造的。神廟最早的稱呼是「在阿蒙的疆域下統一底比斯之城的Usermaatra-setepenra萬年之祭廟」。</p>
+    </div>
+    <div class="col-md-4 order-md-1">
+      <img src="3/6.jpg" class="w-100"/>
+    </div>
+  </div>
+  <hr />
+
+  <div class="row">
+    <div class="col-md-8">
+      <h2>哈特謝普蘇特神廟</h2>
+      <p>哈特謝普蘇特神廟是埃及第十八王朝法老哈特謝普蘇特統治時期的第七年至第二十年之間建造的太平間廟宇。它位於盧克索附近。它的設計深受埃及第十一王朝曼圖霍特普二世時期建造的曼圖霍特普二世神廟的影響。</p><p>
+        1737 年，來自英國的理察·波科克發現了哈特謝普蘇特神廟遺址。1893年至1906年間，由愛德華·納維爾領導的埃及勘探團隊對神廟遺址進行全面挖掘。
+        </p>
+    </div>
+    <div class="col-md-4">
+      <img src="3/7.jpg" class="w-100"/>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-md-8 order-md-2">
+      <h2>塞提一世之廟
+      </h2>
+      <p>位於阿拜多斯的法老塞提一世神廟，阿拜多斯在今埃及索哈傑省境內。該地名為希臘語，起源於古埃及地名「阿卜杜」。1857年法國考古學者馬里埃特在此發現古埃及神廟遺址，並展開全面性挖掘，之後，陸續有西方考古團體在此大規模發掘。
+      </p>
+    </div>
+    <div class="col-md-4 order-md-1">
+      <img src="3/8.jpg" class="w-100"/>
+    </div>
+  </div>
+  <hr />
+
+  <div class="row">
+    <div class="col-md-8">
+      <h2>拉美西斯三世之廟
+      </h2>
+      <p>哈布城是拉美西斯三世的陵廟，是法老統治時期的最後一座大型建築工程，也是埃及最後一段富饒時期的紀念物。 這裡原先是皇室居所，第一進院落是舉行儀式和娛樂的場所，第二進院落在托勒密和羅馬時代被教堂所佔據；此外，這裡還有三座多柱廳，第二座大廳的外左側就是拉美西斯三世的墓室。
+      </p>
+    </div>
+    <div class="col-md-4">
+      <img src="3/9.jpg" class="w-100"/>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-md-8 order-md-2">
+      <h2>國王谷
+      </h2>
+      <p>國王谷或被稱為國王之門谷是位於埃及的一個山谷，埋葬古埃及新王國時期18到20王朝的法老和貴族而聞名。</p><p>
+        國王谷位於底比斯對面的尼羅河西岸，位於底比斯墓地的中心地帶。乾河由兩個山谷組成：東谷（大部分皇家陵墓所在的地方）和西谷（猴子谷）。隨著2005年發現一個新墓室和2008年發現另外兩個墓穴入口，國王谷已知有63座墓葬和墓室。它是埃及新王國主要王室成員以及一些特權貴族的主要墓地。始於圖特摩斯一世時期終於拉美西斯十世或十一世時期，皇家陵墓裝飾著埃及神話中的場景，並提供有關該時期信仰和喪葬習俗的線索。幾乎所有的陵墓似乎都在古代被打開和搶劫過。
+        </p>
+    </div>
+    <div class="col-md-4 order-md-1">
+      <img src="3/10.jpg" class="w-100"/>
+    </div>
+  </div>
+  <hr />
+
+  <div class="row">
+    <div class="col-md-8">
+      <h2>王后谷<span class="text-muted">（Valley of the Queens）</span></h2>
+      <p>王后谷是古埃及法老的妻子死後所安葬的地方，主要盛行於古埃及第十八、十九和二十王朝（公元前1550年至前1070年）。其中也有很多是王子、公主和貴族的陵墓。</p><p>
+        王后谷位在較知名的帝王谷附近，也就是底比斯的尼羅河西岸。王后谷在古埃及時代被稱為「Ta-set-neferu」。這個陵墓群之所以選在首都西邊的貧瘠丘陵，原因可能是因為在埃及第十八王朝時期盜墓賊漸增，且都是鎖定金字塔，因此改葬在岩石切陵。</p><P>
+        王后谷經考古團隊人員調查出約有將近100多個墓（包含無法分類的陵墓），有幾個墓穴的裝飾十分豪華時髦，非常有貴族的作風。
+        </p>
+    </div>
+    <div class="col-md-4">
+      <img src="3/11.jpg" class="w-100"/>
+    </div>
+  </div>
+  <hr />
+
+</div>
+<footer class="section footer bg-warning">
+  <ul class="footer-links list-unstyled">
+      <li><a href="index.html" class="footer-link">首頁</a></li>
+      <li><a href="sanliao.html" class="footer-link">中國三僚村</a></li>
+      <li><a href="tajmahal.html" class="footer-link">印度泰姬瑪哈陵</a></li>
+      <li><a href="thebes.html" class="footer-link">埃及底比斯</a></li>
+      <li><a href="nazcalines.html" class="footer-link">秘魯納斯卡線</a></li>
+  </ul>
+  <ul class="footer-icons list-unstyled">
+      <li>
+          <a href="https://www.facebook.com/forecasting.hk/" class="footer-icon">
+              <i class="fa-brands fa-facebook"></i>
+          </a>
+      </li>
+      <li>
+          <a href="https://wa.me/85296949133?text=我想了解風水神秘學探索者之旅" class="footer-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+      </li>
+      <li>
+          <a href="https://www.instagram.com/forecasting_hk" class="footer-icon">
+              <i class="fa-brands fa-instagram"></i>
+          </a>
+      </li>
+  </ul>
+  <p class="copyright">
+      版權所有 &copy; <span id="footer_date"></span>
+  </p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+  <script src="js/thebes.js"></script>
+</body>
+</html>
