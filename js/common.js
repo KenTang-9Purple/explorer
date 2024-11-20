@@ -11,14 +11,12 @@ function genMenu(activeLink){
         {link:"thebes.html" , name:"埃及底比斯"},
         {link:"nazcalines.html" , name:"秘魯納斯卡線"}];
         links.forEach((link) => {
-            let na  = document.createElement("a");
-            let nli = document.createElement("li");
-            let fa  = document.createElement("a");
-            let fli = document.createElement("li");
-            fa.href=link.link;
+            const na  = document.createElement("a");
+            const nli = document.createElement("li");
+            const fli = document.createElement("li");
             na.href=link.link;
-            fa.textContent=link.name; 
             na.textContent=link.name;
+            const fa = na.cloneNode(true);
             na.className="nav-link";
             fa.className="footer-link";  
             nli.className=(activeLink == link.link  ? "nav-item active":  "nav-item" );
