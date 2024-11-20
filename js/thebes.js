@@ -19,3 +19,5 @@ document.getElementById("calNumerology").onclick =() => {
     numerology = numerology ? numerology : 9;
     document.getElementById("result").innerHTML="您的生命數為："+numerology+","+result[numerology];
 }
+
+genMenu("thebes.html");

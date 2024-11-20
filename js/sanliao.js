@@ -1,16 +1,3 @@
-
-function getLocation(f) {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition( (position)=> {
-        lat = position.coords.latitude;
-        lon = position.coords.longitude;
-        if(typeof f =="function")
-          f();
-      }    
-    )
-  }
-}
-
 function get4pillar(dDate){
   let p = new paipan();
   const pillar=['年','月','日','時'];
@@ -33,3 +20,4 @@ window.addEventListener("load", (event) => {
   timeout();
 });
 
+genMenu("sanliao.html");

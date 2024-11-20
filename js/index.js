@@ -72,3 +72,4 @@ window.addEventListener("load", (event) => {
   calSMPosition();
   timeout();
 });
+genMenu("index.html");

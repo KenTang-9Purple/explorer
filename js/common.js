@@ -1,6 +1,34 @@
 document.getElementById("footer_date").innerHTML = new Date().getFullYear();
-const lat = 22.3994305;
-const lon = 113.9709846;
+let lat = 22.3994305;
+let lon = 113.9709846;
+
+
+
+function genMenu(activeLink){
+    const links = [{link:"index.html" , name:"首頁"},
+        {link:"sanliao.html" , name:"中國三僚村"},
+        {link:"tajmahal.html" , name:"印度泰姬瑪哈陵"},
+        {link:"thebes.html" , name:"埃及底比斯"},
+        {link:"nazcalines.html" , name:"秘魯納斯卡線"}];
+        links.forEach((link) => {
+            let na  = document.createElement("a");
+            let nli = document.createElement("li");
+            let fa  = document.createElement("a");
+            let fli = document.createElement("li");
+            fa.href=link.link;
+            na.href=link.link;
+            fa.textContent=link.name; 
+            na.textContent=link.name;
+            na.className="nav-link";
+            fa.className="footer-link";  
+            nli.className=(activeLink == link.link  ? "nav-item active":  "nav-item" );
+            nli.appendChild(na);
+            fli.appendChild(fa);
+            document.getElementById("navbar").appendChild(nli);
+            document.getElementById("footer-links").appendChild(fli);
+        }
+    )
+}
 
 function getRealTime(){
     let curTime=new Date();

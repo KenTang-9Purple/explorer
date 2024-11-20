@@ -29,4 +29,5 @@ window.addEventListener("load", (event) => {
   getLocation();
   timeout();
 });
+genMenu("tajmahal.html");
 

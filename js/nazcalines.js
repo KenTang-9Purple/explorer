@@ -27,3 +27,5 @@ document.getElementById("tarot_img").onclick = () => {
   document.getElementById("eng_name").innerHTML = card_info[card_no].name_en;
   document.getElementById("keyword").innerHTML = card_info[card_no].keyword;
 }
+
+genMenu("nazcalines.html");
