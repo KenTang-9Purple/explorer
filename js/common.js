@@ -28,21 +28,6 @@ function genMenu(activeLink){
     )
 }
 function genFooterIcon() {
-    /*<li>
-    <a href="https://www.facebook.com/forecasting.hk/" class="footer-icon">
-        <i class="fa-brands fa-facebook"></i>
-    </a>
-</li>
-<li>
-    <a href="https://wa.me/85296949133?text=我想了解風水神秘學探索者之旅" class="footer-icon">
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
-</li>
-<li>
-    <a href="https://www.instagram.com/forecasting_hk" class="footer-icon">
-        <i class="fa-brands fa-instagram"></i>
-    </a>
-</li>*/
     const icons = [{link:"https://www.facebook.com/forecasting.hk/",icon:"fa-brands fa-facebook"},
         {link:"https://wa.me/85296949133?text=我想了解風水神秘學探索者之旅",icon:"fa-brands fa-whatsapp"},
         {link:"https://www.instagram.com/forecasting_hk",icon:"fa-brands fa-instagram"}
@@ -58,7 +43,6 @@ function genFooterIcon() {
         li.appendChild(a);
         document.querySelector(".footer-icons").appendChild(li);
     });
-    //footer-icons
 }
 
 genFooterIcon();

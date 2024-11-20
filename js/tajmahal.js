@@ -1,8 +1,8 @@
 function get9star(dDate){
-  let p = new paipan();
+  const p = new paipan();
   let output="";
   let nine = [0,0,0,0];
-  let nineStarName =["九紫","一白","二黑","三碧","四綠","五黃","六白","七赤","八白","九紫"];
+  const nineStarName =["九紫","一白","二黑","三碧","四綠","五黃","六白","七赤","八白","九紫"];
   const pillar=['年','月','日','時'];
   var fm = p.fatemaps(0, dDate.getFullYear() , dDate.getMonth()  , dDate.getDay() , dDate.getHours() , dDate.getMinutes(), dDate.getSeconds());
   let eight_word="";
